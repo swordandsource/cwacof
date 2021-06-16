@@ -12,3 +12,12 @@ To use the generator, open the index.html file in any web browser.
 
 1. `npm i`
 1. `npm run start`
+
+## Inspiration
+
+- [DNGNGEN](https://dngngen.makedatanotlore.dev/)
+- [Spell lists are not magical](https://www.prismaticwasteland.com/blog/spell-lists-are-not-magical)
+- Maze Rats
+- Mork Borg
+- Errant
+- Troika!
