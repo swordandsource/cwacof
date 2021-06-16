@@ -6,6 +6,7 @@ import etherealForms from "../data/maze-rats-ethereal-forms.json";
 import physicalEffects from "../data/maze-rats-physical-effects.json";
 import physicalElements from "../data/maze-rats-physical-elements.json";
 import physicalForms from "../data/maze-rats-physical-forms.json";
+import colors from "../data/colors.json";
 import { render } from "mustache";
 
 document.addEventListener("DOMContentLoaded", (event) => {
@@ -35,7 +36,7 @@ function rollSpell() {
 function rollSpellName(options = {}) {
   const variants = [
     "Daemon of the {{color}} {{noun}}",
-    "{{firstName}}'s {{adjective} Grace",
+    "{{firstName}}'s {{adjective}} Grace",
     "{{noun}} of {{firstName}}",
     "{{noun}} of {{emotion}}",
     "{{firstName}}'s {{noun}}",
@@ -46,7 +47,7 @@ function rollSpellName(options = {}) {
   ];
 
   const view = {
-    color: () => "Red",
+    color: () => rollColor(),
     noun: () => options.noun ?? rollSpellSuffix(),
     firstName: () => "St. Mary",
     adjective: () => "Testing",
@@ -56,10 +57,28 @@ function rollSpellName(options = {}) {
   return render(sample(variants), view);
 }
 
+function rollColor() {
+  return sample(colors);
+}
+
+const VOWELS = ["a", "e", "i", "o", "u"];
+
 function rollSpellEffect(options = {}) {
+  const actions = [
+    "summon",
+    "project",
+    "bring forth",
+    "conjure",
+    "cast",
+    "emanate",
+    "hurl",
+    "invoke",
+  ];
+  const action = sample(actions);
   const prefix = rollSpellPrefix();
   const suffix = options.suffix ?? rollSpellSuffix();
-  return `${capitalize(prefix)} ${capitalize(suffix)}`;
+  const joiningWord = VOWELS.includes(prefix[0]) ? "an" : "a";
+  return `${capitalize(action)} ${joiningWord} ${prefix} ${suffix}.`;
 }
 
 function rollSpellPrefix() {
