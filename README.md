@@ -7,3 +7,8 @@ If you enjoyed this, check out [my epic collection of fantasy generators for bus
 ## Get started
 
 To use the generator, open the index.html file in any web browser.
+
+## Dev
+
+1. `npm i`
+1. `npm run start`

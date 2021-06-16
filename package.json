@@ -1,0 +1,24 @@
+{
+  "name": "cwacof",
+  "version": "1.0.0",
+  "description": "Cloudy With A Chance Of Fireballs",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swordandsource/cwacof.git"
+  },
+  "author": "AWaselnuk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/swordandsource/cwacof/issues"
+  },
+  "homepage": "https://github.com/swordandsource/cwacof#readme",
+  "dependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}
