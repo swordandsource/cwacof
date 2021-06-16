@@ -7,6 +7,7 @@ import physicalEffects from "../data/maze-rats-physical-effects.json";
 import physicalElements from "../data/maze-rats-physical-elements.json";
 import physicalForms from "../data/maze-rats-physical-forms.json";
 import colors from "../data/colors.json";
+import firstNames from "../data/first-names.json";
 import { render } from "mustache";
 
 document.addEventListener("DOMContentLoaded", (event) => {
@@ -47,14 +48,26 @@ function rollSpellName(options = {}) {
   ];
 
   const view = {
-    color: () => rollColor(),
-    noun: () => options.noun ?? rollSpellSuffix(),
-    firstName: () => "St. Mary",
+    color: () => capitalize(rollColor()),
+    noun: () => capitalize(options.noun ?? rollSpellSuffix()),
+    firstName: () => rollFirstName(),
     adjective: () => "Testing",
     emotion: () => "Sorrow",
   };
 
   return render(sample(variants), view);
+}
+
+function rollFirstName() {
+  if (d6() == 1) {
+    return `St. ${sample(firstNames)}`;
+  } else {
+    return sample(firstNames);
+  }
+}
+
+function d6() {
+  return sample([1, 2, 3, 4, 5, 6]);
 }
 
 function rollColor() {
