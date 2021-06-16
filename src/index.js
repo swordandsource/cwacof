@@ -8,6 +8,7 @@ import physicalElements from "../data/maze-rats-physical-elements.json";
 import physicalForms from "../data/maze-rats-physical-forms.json";
 import colors from "../data/colors.json";
 import firstNames from "../data/first-names.json";
+import emotions from "../data/emotions.json";
 import { render } from "mustache";
 
 document.addEventListener("DOMContentLoaded", (event) => {
@@ -52,10 +53,14 @@ function rollSpellName(options = {}) {
     noun: () => capitalize(options.noun ?? rollSpellSuffix()),
     firstName: () => rollFirstName(),
     adjective: () => "Testing",
-    emotion: () => "Sorrow",
+    emotion: () => capitalize(rollEmotion()),
   };
 
   return render(sample(variants), view);
+}
+
+function rollEmotion() {
+  return sample(emotions);
 }
 
 function rollFirstName() {
