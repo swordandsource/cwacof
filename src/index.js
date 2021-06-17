@@ -10,6 +10,7 @@ import colors from "../data/colors.json";
 import firstNames from "../data/first-names.json";
 import emotions from "../data/emotions.json";
 import adjectives from "../data/adjectives.json";
+import aoes from "../data/spell-aoe.json";
 import { render } from "mustache";
 
 document.addEventListener("DOMContentLoaded", (event) => {
@@ -25,6 +26,8 @@ function renderSpell(spell) {
   spellNameNode.innerText = spell.name;
   const spellEffectNode = document.getElementById("spell-effect");
   spellEffectNode.innerText = spell.effect;
+  const spellAoeNode = document.getElementById("spell-aoe");
+  spellAoeNode.innerText = spell.aoe;
 }
 
 function rollSpell() {
@@ -32,7 +35,16 @@ function rollSpell() {
   return {
     name: rollSpellName({ noun }),
     effect: rollSpellEffect({ suffix: noun }),
+    aoe: rollSpellAoe(),
   };
+}
+
+function rollSpellAoe() {
+  const view = {
+    d6: d6,
+  };
+  const aoe = render(sample(aoes), view);
+  return `This spell can affect ${aoe}.`;
 }
 
 // Need some crazy names
