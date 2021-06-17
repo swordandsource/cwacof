@@ -50,13 +50,58 @@ function rollSpell() {
 function rollSpellCatastrophe() {
   const view = {
     d6: d6,
-    animal: "dog",
-    bodyPart: "arm",
+    animal: rollAnimal,
+    bodyPart: rollBodyPart,
     color: rollColor,
-    monster: "wendigo",
+    monster: rollMonster,
   };
 
   return render(sample(catastrophes), view);
+}
+
+function rollBodyPart() {
+  const parts = [
+    "head",
+    "leg",
+    "arm",
+    "penis",
+    "foot",
+    "hand",
+    "finger",
+    "toe",
+    "ear",
+    "nose",
+    "eye",
+    "butt",
+  ];
+
+  return sample(parts);
+}
+
+function rollMonster() {
+  const monsters = [
+    "wendigo",
+    "vampire bat",
+    "giant spider",
+    "wyvern",
+    "troll",
+    "zombie",
+    "ghoul",
+    "ogre",
+    "basilisk",
+    "wraith",
+    "skeleton",
+    "goblin",
+    "berserker",
+    "lich",
+  ];
+
+  return sample(monsters);
+}
+
+function rollAnimal() {
+  const animals = ["dog", "cat", "monkey", "cow", "pig", "chicken", "rooster"];
+  return sample(animals);
 }
 
 function rollSpellRange() {
