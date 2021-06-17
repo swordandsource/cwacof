@@ -9,6 +9,7 @@ import physicalForms from "../data/maze-rats/physical-forms.json";
 import colors from "../data/colors.json";
 import firstNames from "../data/first-names.json";
 import emotions from "../data/emotions.json";
+import adjectives from "../data/adjectives.json";
 import { render } from "mustache";
 
 document.addEventListener("DOMContentLoaded", (event) => {
@@ -43,6 +44,9 @@ function rollSpellName(options = {}) {
     "{{noun}} of {{emotion}}",
     "{{firstName}}'s {{noun}}",
     "{{adjective}} Hands Trace the {{noun}}",
+    "The {{adjective}} Geometries of {{firstName}}",
+    "The {{adjective}} Wish",
+    "The {{adjective}} Embrace",
     "Forgotten {{noun}} of {{firstName}}",
     "Curse of {{firstName}}",
     "Foul {{noun}}",
@@ -52,11 +56,16 @@ function rollSpellName(options = {}) {
     color: () => capitalize(rollColor()),
     noun: () => capitalize(options.noun ?? rollSpellSuffix()),
     firstName: () => rollFirstName(),
-    adjective: () => "Testing",
+    adjective: () => capitalize(rollAdjective()),
     emotion: () => capitalize(rollEmotion()),
   };
 
   return render(sample(variants), view);
+}
+
+function rollAdjective() {
+  const collection = adjectives.concat(physicalEffects).concat(etherealEffects);
+  return sample(collection);
 }
 
 function rollEmotion() {
