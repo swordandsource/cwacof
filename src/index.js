@@ -12,6 +12,7 @@ import emotions from "../data/emotions.json";
 import adjectives from "../data/adjectives.json";
 import aoes from "../data/spell-aoe.json";
 import ranges from "../data/spell-ranges.json";
+import catastrophes from "../data/catastrophes.json";
 import { render } from "mustache";
 
 document.addEventListener("DOMContentLoaded", (event) => {
@@ -31,6 +32,8 @@ function renderSpell(spell) {
   spellAoeNode.innerText = spell.aoe;
   const spellRangeNode = document.getElementById("spell-range");
   spellRangeNode.innerText = spell.range;
+  const rollSpellCatastropheNode = document.getElementById("spell-catastrophe");
+  rollSpellCatastropheNode.innerText = spell.catastrophe;
 }
 
 function rollSpell() {
@@ -40,7 +43,20 @@ function rollSpell() {
     effect: rollSpellEffect({ suffix: noun }),
     aoe: rollSpellAoe(),
     range: rollSpellRange(),
+    catastrophe: rollSpellCatastrophe(),
   };
+}
+
+function rollSpellCatastrophe() {
+  const view = {
+    d6: d6,
+    animal: "dog",
+    bodyPart: "arm",
+    color: rollColor,
+    monster: "wendigo",
+  };
+
+  return render(sample(catastrophes), view);
 }
 
 function rollSpellRange() {
