@@ -11,6 +11,7 @@ import firstNames from "../data/first-names.json";
 import emotions from "../data/emotions.json";
 import adjectives from "../data/adjectives.json";
 import aoes from "../data/spell-aoe.json";
+import ranges from "../data/spell-ranges.json";
 import { render } from "mustache";
 
 document.addEventListener("DOMContentLoaded", (event) => {
@@ -28,6 +29,8 @@ function renderSpell(spell) {
   spellEffectNode.innerText = spell.effect;
   const spellAoeNode = document.getElementById("spell-aoe");
   spellAoeNode.innerText = spell.aoe;
+  const spellRangeNode = document.getElementById("spell-range");
+  spellRangeNode.innerText = spell.range;
 }
 
 function rollSpell() {
@@ -36,7 +39,16 @@ function rollSpell() {
     name: rollSpellName({ noun }),
     effect: rollSpellEffect({ suffix: noun }),
     aoe: rollSpellAoe(),
+    range: rollSpellRange(),
   };
+}
+
+function rollSpellRange() {
+  const view = {
+    d6: d6,
+  };
+  const range = render(sample(ranges), view);
+  return `Can hit a target ${range}.`;
 }
 
 function rollSpellAoe() {

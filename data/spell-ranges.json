@@ -1,7 +1,7 @@
 [
   "in your line of sight",
-  "within {d6} paces",
-  "no further than the length of {d6} oxen",
+  "within {{d6}} paces",
+  "no further than the length of {{d6}} oxen",
   "as far as the crow flies",
   "as far as the frog leaps",
   "as far as a cat leaps",
