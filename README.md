@@ -13,6 +13,14 @@ To use the generator, open the index.html file in any web browser.
 1. `npm i`
 1. `npm run start`
 
+## License
+
+The content in the JSON files that are contained in the `data/maze-rats` was created by [Ben Milton](https://www.questingblog.com) and is used with permission under the [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) license. If you want to use that content, you must abide by the CC BY 4.0 license.
+
+The algorithm to generate spell effects is a remix of the method outlined in the game Maze Rats by Ben Milton.
+
+Everything else in this repository is licensed under [ISC](LICENSE).
+
 ## Inspiration
 
 - [DNGNGEN](https://dngngen.makedatanotlore.dev/)
