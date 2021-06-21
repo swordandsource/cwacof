@@ -46,6 +46,12 @@ function renderSpell(spell) {
     const [_data, _spell, prop] = id.split("-");
     nodes.forEach((node) => (node.innerText = spell[prop]));
   });
+
+  const spellTitleNode = document.querySelector(".data-spell-title");
+  spellTitleNode.innerHTML = `<span class="spell-name-drop-cap">${spell.name.slice(
+    0,
+    1
+  )}</span>${spell.name.substring(1)}`;
 }
 
 function rollSpell() {
@@ -67,14 +73,14 @@ function rollSpell() {
 
 function rollSpellDamage(power) {
   const damage = sample(damages[power]);
-  return `The damage this spell wreaks is ${damage}.`;
+  return damage;
 }
 
 function rollSpellDuration(power) {
   const view = { d6: d6 };
   const duration = render(sample(durations[power]), view);
 
-  return `The effects last ${duration}.`;
+  return duration;
 }
 
 function rollSpellPower() {
@@ -87,7 +93,7 @@ function rollSpellRitual(power) {
   };
   const ritual = render(sample(rituals[power]), view);
 
-  return `To cast this spell, you mut ${ritual}.`;
+  return ritual;
 }
 
 function rollSpellRecharge(power) {
@@ -97,7 +103,7 @@ function rollSpellRecharge(power) {
   };
   const recharge = render(sample(recharges[power]), view);
 
-  return `To prepare this spell for casting, you must ${recharge}.`;
+  return recharge;
 }
 
 function rollSpellCatastrophe() {
@@ -162,7 +168,7 @@ function rollSpellRange() {
     d6: d6,
   };
   const range = render(sample(ranges), view);
-  return `Can hit a target ${range}.`;
+  return range;
 }
 
 function rollSpellAoe() {
@@ -170,7 +176,7 @@ function rollSpellAoe() {
     d6: d6,
   };
   const aoe = render(sample(aoes), view);
-  return `This spell can affect ${aoe}.`;
+  return aoe;
 }
 
 // Need some crazy names

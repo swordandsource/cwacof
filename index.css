@@ -1,8 +1,79 @@
+@font-face {
+  font-family: "proclamate_heavy";
+  src: url("assets/fonts/proclamate/proclamate_heavy-webfont.woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "proclamate_incisedheavy";
+  src: url("assets/fonts/proclamate/proclamate_incised-webfont.woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "proclamate_light";
+  src: url("assets/fonts/proclamate/proclamate_light-webfont.woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  font-family: "Vollkorn", sans-serif;
+  font-size: 10px;
+}
+
 main {
   max-width: 650px;
   margin: 0 auto;
+  font-size: 1.8rem;
+}
+
+p {
+  margin: 0;
+}
+
+.cwacof {
+  font-family: "proclamate_incisedheavy";
+  font-size: 4rem;
+}
+
+.spell-name {
+  font-family: "proclamate_heavy";
+  font-size: 3rem;
+  margin: 0;
+}
+
+.spell-name-drop-cap {
+  color: red;
+  font-size: 6rem;
+  float: left;
+  margin-right: 1px;
+  margin-bottom: 1px;
+}
+
+.spell-reroll {
+  color: red;
 }
 
 .image-fireballs {
   background-color: orange;
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .image-fireballs {
+    float: left;
+    width: auto;
+    margin-right: 8px;
+    margin-bottom: 8px;
+  }
+}
+
+.section:after {
+  content: "";
+  display: table;
+  clear: both;
 }

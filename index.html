@@ -10,18 +10,73 @@
     </title>
   </head>
   <body>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Germania+One&display=swap"
+      rel="stylesheet"
+    /> -->
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Germania+One&family=Tangerine:wght@400;700&display=swap"
+      rel="stylesheet"
+    /> -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" type="text/css" href="index.css" />
     <script src="./src/index.js"></script>
     <main>
       <header>
-        <h1>Cloudy With A Chance Of Fireballs</h1>
+        <h1 class="cwacof">Cloudy With A Chance Of Fireballs</h1>
         <button id="btn-roll-spell">Roll Spell</button>
       </header>
-      <div class="section-name">
-        <img class="image-fireballs" height="250" width="250" />
-        <h2 class="spell-name data-spell-name"></h2>
+      <div class="section section-name">
+        <img class="image-fireballs" height="200" width="200" />
+        <h2 class="spell-name data-spell-title"></h2>
+        <p>
+          <span class="data-spell-effect"></span>
+          <span class="spell-reroll spell-aoe"
+            >This <span class="data-spell-power"></span> spell can affect
+          </span>
+          <span class="data-spell-aoe"></span> and
+          <span class="spell-reroll spell-range">it can hit a target</span>
+          <span class="data-spell-range"></span>.
+          <span class="spell-reroll spell-damage"
+            >The damage this spell wreaks is</span
+          >
+          <span class="data-spell-damage"></span>.
+          <span class="spell-reroll spell-duration"
+            >The spell's effects last</span
+          >
+          <span class="data-spell-duration"></span>.
+        </p>
+      </div>
+      <div class="section section-ritual">
+        <p>
+          Casting <span class="data-spell-name"></span> requires specific
+          rituals for both casting and preparation.
+          <span class="spell-reroll spell-ritual">To cast this spell</span>, you
+          will need to <span class="data-spell-ritual"></span>. After the spell
+          has been cast, you will not be able to cast it again without the
+          appropriate preparations.
+          <span class="spell-reroll spell-recharge"
+            >To prepare the spell for another casting</span
+          >, you must <span class="data-spell-recharge"></span>.
+        </p>
+      </div>
+      <div class="section section-catastrophe">
+        <p>
+          Be ye warned! Failure to cast
+          <span class="data-spell-name"></span> correctly, failure to respect
+          its ritual requirements, and failure to avoid the random interference
+          of the gods will result in an
+          <span class="spell-reroll spell-catastrophe"
+            >arcane catastrophe for the caster</span
+          >. <span class="data-spell-catastrophe"></span>
+        </p>
       </div>
       <hr />
+      <h2><span class="data-spell-name"></span></h2>
       <ul>
         <!-- Something cool like in Mork Borg -->
         <li>Spell Name: <span class="data-spell-name"></span></li>
