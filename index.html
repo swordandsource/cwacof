@@ -10,27 +10,31 @@
     </title>
   </head>
   <body>
+    <link rel="stylesheet" type="text/css" href="index.css" />
     <script src="./src/index.js"></script>
-    <h1>It begins again!!</h1>
-    <button id="btn-roll-spell">Roll Spell</button>
-    <ul>
-      <!-- Something cool like in Mork Borg -->
-      <li>Spell Name: <span id="spell-name"></span></li>
-      <li>Spell Effect: <span id="spell-effect"></span></li>
-      <li>Spell Power: <span id="spell-power"></span></li>
-      <li>
-        Casting Cost/process: <span id="spell-ritual"></span>
-      </li>
-      <li>
-        Recharge: <span id="spell-recharge"></span>
-      </li>
-      <li>Spell AOE: <span id="spell-aoe"></span></li>
-      <li>Spell Range: <span id="spell-range"></span></li>
-      <li>Spell Damage: <span id="spell-damage"></span></li>
-      <li>Spell Duration: <span id="spell-duration"></span></li>
-      <li>
-        Catastrophe: <span id="spell-catastrophe"></span></li>
-      </li>
-    </ul>
+    <main>
+      <header>
+        <h1>Cloudy With A Chance Of Fireballs</h1>
+        <button id="btn-roll-spell">Roll Spell</button>
+      </header>
+      <div class="section-name">
+        <img class="image-fireballs" height="250" width="250" />
+        <h2 class="spell-name data-spell-name"></h2>
+      </div>
+      <hr />
+      <ul>
+        <!-- Something cool like in Mork Borg -->
+        <li>Spell Name: <span class="data-spell-name"></span></li>
+        <li>Spell Effect: <span class="data-spell-effect"></span></li>
+        <li>Spell Power: <span class="data-spell-power"></span></li>
+        <li>Casting Cost/process: <span class="data-spell-ritual"></span></li>
+        <li>Recharge: <span class="data-spell-recharge"></span></li>
+        <li>Spell AOE: <span class="data-spell-aoe"></span></li>
+        <li>Spell Range: <span class="data-spell-range"></span></li>
+        <li>Spell Damage: <span class="data-spell-damage"></span></li>
+        <li>Spell Duration: <span class="data-spell-duration"></span></li>
+        <li>Catastrophe: <span class="data-spell-catastrophe"></span></li>
+      </ul>
+    </main>
   </body>
 </html>

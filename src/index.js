@@ -29,22 +29,22 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 function renderSpell(spell) {
   const IDS = [
-    "spell-name",
-    "spell-effect",
-    "spell-aoe",
-    "spell-range",
-    "spell-catastrophe",
-    "spell-power",
-    "spell-ritual",
-    "spell-recharge",
-    "spell-damage",
-    "spell-duration",
+    "data-spell-name",
+    "data-spell-effect",
+    "data-spell-aoe",
+    "data-spell-range",
+    "data-spell-catastrophe",
+    "data-spell-power",
+    "data-spell-ritual",
+    "data-spell-recharge",
+    "data-spell-damage",
+    "data-spell-duration",
   ];
 
   IDS.forEach((id) => {
-    const node = document.getElementById(id);
-    const [_, prop] = id.split("-");
-    node.innerText = spell[prop];
+    const nodes = document.querySelectorAll(`.${id}`);
+    const [_data, _spell, prop] = id.split("-");
+    nodes.forEach((node) => (node.innerText = spell[prop]));
   });
 }
 
