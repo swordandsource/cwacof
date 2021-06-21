@@ -1,0 +1,21 @@
+{
+  "fast": [
+    "{{d6}} seconds",
+    "{{d6}} minutes",
+    "for about as long as it takes to recite the alphabet"
+  ],
+  "medium": [
+    "{{d6}} hours",
+    "for about as long as it takes to read a fairy tale"
+  ],
+  "slow": [
+    "{{d6}} days",
+    "{{d6}} weeks",
+    "a fortnight",
+    "until the next lunar eclipse",
+    "until the next solar eclipse",
+    "until the seasons change",
+    "until the sun fails to rise in the morning",
+    "until all civilizations fade to myth"
+  ]
+}

@@ -13,6 +13,10 @@ import adjectives from "../data/adjectives.json";
 import aoes from "../data/spell-aoe.json";
 import ranges from "../data/spell-ranges.json";
 import catastrophes from "../data/catastrophes.json";
+import castings from "../data/castings.json";
+import recharges from "../data/recharges.json";
+import damages from "../data/spell-damages.json";
+import durations from "../data/spell-durations.json";
 import { render } from "mustache";
 
 document.addEventListener("DOMContentLoaded", (event) => {
@@ -34,17 +38,68 @@ function renderSpell(spell) {
   spellRangeNode.innerText = spell.range;
   const rollSpellCatastropheNode = document.getElementById("spell-catastrophe");
   rollSpellCatastropheNode.innerText = spell.catastrophe;
+  const spellSpeedNode = document.getElementById("spell-speed");
+  spellSpeedNode.innerText = spell.speed;
+  const spellRitualNode = document.getElementById("spell-ritual");
+  spellRitualNode.innerText = spell.ritual;
+  const spellRechargeNode = document.getElementById("spell-recharge");
+  spellRechargeNode.innerText = spell.recharge;
+  const spellDamageNode = document.getElementById("spell-damage");
+  spellDamageNode.innerText = spell.damage;
+  const spellDurationNode = document.getElementById("spell-duration");
+  spellDurationNode.innerText = spell.duration;
 }
 
 function rollSpell() {
   const noun = rollSpellSuffix();
+  const speed = rollSpellSpeed();
   return {
     name: rollSpellName({ noun }),
     effect: rollSpellEffect({ suffix: noun }),
     aoe: rollSpellAoe(),
     range: rollSpellRange(),
+    speed: speed,
+    ritual: rollSpellRitual(speed),
+    recharge: rollSpellRecharge(speed),
+    damage: rollSpellDamage(speed),
+    duration: rollSpellDuration(speed),
     catastrophe: rollSpellCatastrophe(),
   };
+}
+
+function rollSpellDamage(speed) {
+  const damage = sample(damages[speed]);
+  return `The damage this spell wreaks is ${damage}.`;
+}
+
+function rollSpellDuration(speed) {
+  const view = { d6: d6 };
+  const duration = render(sample(durations[speed]), view);
+
+  return `The effects last ${duration}.`;
+}
+
+function rollSpellSpeed() {
+  return sample(["fast", "medium", "slow"]);
+}
+
+function rollSpellRitual(speed) {
+  const view = {
+    d6: d6,
+  };
+  const ritual = render(sample(castings[speed]), view);
+
+  return `To cast this spell, you mut ${ritual}.`;
+}
+
+function rollSpellRecharge(speed) {
+  const view = {
+    d6: d6,
+    monster: rollMonster,
+  };
+  const recharge = render(sample(recharges[speed]), view);
+
+  return `To prepare this spell for casting, you must ${recharge}.`;
 }
 
 function rollSpellCatastrophe() {

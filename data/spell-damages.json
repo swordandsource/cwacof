@@ -1,0 +1,17 @@
+{
+  "fast": [
+    "barely worth considering",
+    "enough to kill a small bird",
+    "enough to startle an animal"
+  ],
+  "medium": [
+    "a cause for insistent pain",
+    "enough to injure a humanoid",
+    "enough to break through a wooden door"
+  ],
+  "slow": [
+    "fatal to most humanoids",
+    "worth writing a song about",
+    "enough to corrupt a star"
+  ]
+}

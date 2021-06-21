@@ -1,0 +1,17 @@
+{
+  "fast": [
+    "tap your heels together",
+    "sing a brief verse",
+    "snap your fingers clearly"
+  ],
+  "medium": [
+    "perform a basic dance",
+    "chant magic words while making the appropriate hand motion",
+    "concentrate for {{d6}} minutes"
+  ],
+  "slow": [
+    "prepare a ritual circle {{d6}} days in advance",
+    "acquire the blood of an enemy and prepare a decoction",
+    "perfectly recite an ancient religious text"
+  ]
+}

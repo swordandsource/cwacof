@@ -1,0 +1,17 @@
+{
+  "fast": [
+    "wait for {{d6}} minutes",
+    "wait for {{d6}} seconds",
+    "spin in {{d6}} circles while facing the sky"
+  ],
+  "medium": [
+    "wait for {{d6}} hours",
+    "rest by an open fire with someone you trust",
+    "remember something bad from your past and then let it go"
+  ],
+  "slow": [
+    "wait for {{d6}} days",
+    "remove one finger from your main hand and burn it at an altar using rare firesalts",
+    "travel to the land of the {{monster}} and recover what has been lost"
+  ]
+}
