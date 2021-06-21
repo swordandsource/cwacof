@@ -12,9 +12,9 @@ import emotions from "../data/emotions.json";
 import adjectives from "../data/adjectives.json";
 import aoes from "../data/spell-aoe.json";
 import ranges from "../data/spell-ranges.json";
-import catastrophes from "../data/catastrophes.json";
-import castings from "../data/castings.json";
-import recharges from "../data/recharges.json";
+import catastrophes from "../data/arcane-catastrophes.json";
+import rituals from "../data/spell-rituals.json";
+import recharges from "../data/spell-recharges.json";
 import damages from "../data/spell-damages.json";
 import durations from "../data/spell-durations.json";
 import { render } from "mustache";
@@ -87,7 +87,7 @@ function rollSpellRitual(speed) {
   const view = {
     d6: d6,
   };
-  const ritual = render(sample(castings[speed]), view);
+  const ritual = render(sample(rituals[speed]), view);
 
   return `To cast this spell, you mut ${ritual}.`;
 }
