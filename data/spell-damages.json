@@ -1,15 +1,15 @@
 {
-  "fast": [
+  "minor": [
     "barely worth considering",
     "enough to kill a small bird",
     "enough to startle an animal"
   ],
-  "medium": [
+  "moderate": [
     "a cause for insistent pain",
     "enough to injure a humanoid",
     "enough to break through a wooden door"
   ],
-  "slow": [
+  "major": [
     "fatal to most humanoids",
     "worth writing a song about",
     "enough to corrupt a star"

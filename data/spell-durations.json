@@ -1,14 +1,14 @@
 {
-  "fast": [
+  "minor": [
     "{{d6}} seconds",
     "{{d6}} minutes",
     "for about as long as it takes to recite the alphabet"
   ],
-  "medium": [
+  "moderate": [
     "{{d6}} hours",
     "for about as long as it takes to read a fairy tale"
   ],
-  "slow": [
+  "major": [
     "{{d6}} days",
     "{{d6}} weeks",
     "a fortnight",
