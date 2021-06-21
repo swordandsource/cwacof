@@ -249,7 +249,7 @@ function rollSpellEffect(options = {}) {
   const prefix = rollSpellPrefix();
   const suffix = options.suffix ?? rollSpellSuffix();
   const joiningWord = VOWELS.includes(prefix[0]) ? "an" : "a";
-  return `${capitalize(action)} ${joiningWord} ${prefix} ${suffix}.`;
+  return `${action} ${joiningWord} ${prefix} ${suffix}`;
 }
 
 function rollSpellPrefix() {

@@ -19,10 +19,20 @@
   font-style: normal;
 }
 
+:root {
+  --spacing: 10px;
+  --breakpoint: 600px;
+}
+
 html,
 body {
   font-family: "Vollkorn", sans-serif;
   font-size: 10px;
+  margin: 0;
+}
+
+body {
+  margin: var(--spacing);
 }
 
 main {
@@ -32,7 +42,18 @@ main {
 }
 
 p {
-  margin: 0;
+  margin-bottom: var(--spacing);
+}
+
+.emphasize {
+  font-weight: 800;
+}
+
+@media (min-width: 600px) {
+  p {
+    margin: 0;
+    margin-bottom: 0;
+  }
 }
 
 .cwacof {
@@ -61,14 +82,29 @@ p {
 .image-fireballs {
   background-color: orange;
   width: 100%;
+  display: block;
+  margin-bottom: var(--spacing);
 }
 
 @media (min-width: 600px) {
   .image-fireballs {
     float: left;
     width: auto;
-    margin-right: 8px;
-    margin-bottom: 8px;
+    margin-right: var(--spacing);
+    margin-bottom: var(--spacing);
+  }
+}
+
+.image-spell-catastrophe {
+  background-color: purple;
+  width: 100%;
+  display: block;
+  margin-bottom: var(--spacing);
+}
+
+@media (min-width: 600px) {
+  .image-spell-catastrophe {
+    display: none;
   }
 }
 
