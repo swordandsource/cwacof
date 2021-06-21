@@ -28,26 +28,24 @@ document.addEventListener("DOMContentLoaded", (event) => {
 });
 
 function renderSpell(spell) {
-  const spellNameNode = document.getElementById("spell-name");
-  spellNameNode.innerText = spell.name;
-  const spellEffectNode = document.getElementById("spell-effect");
-  spellEffectNode.innerText = spell.effect;
-  const spellAoeNode = document.getElementById("spell-aoe");
-  spellAoeNode.innerText = spell.aoe;
-  const spellRangeNode = document.getElementById("spell-range");
-  spellRangeNode.innerText = spell.range;
-  const rollSpellCatastropheNode = document.getElementById("spell-catastrophe");
-  rollSpellCatastropheNode.innerText = spell.catastrophe;
-  const spellPowerNode = document.getElementById("spell-power");
-  spellPowerNode.innerText = spell.power;
-  const spellRitualNode = document.getElementById("spell-ritual");
-  spellRitualNode.innerText = spell.ritual;
-  const spellRechargeNode = document.getElementById("spell-recharge");
-  spellRechargeNode.innerText = spell.recharge;
-  const spellDamageNode = document.getElementById("spell-damage");
-  spellDamageNode.innerText = spell.damage;
-  const spellDurationNode = document.getElementById("spell-duration");
-  spellDurationNode.innerText = spell.duration;
+  const IDS = [
+    "spell-name",
+    "spell-effect",
+    "spell-aoe",
+    "spell-range",
+    "spell-catastrophe",
+    "spell-power",
+    "spell-ritual",
+    "spell-recharge",
+    "spell-damage",
+    "spell-duration",
+  ];
+
+  IDS.forEach((id) => {
+    const node = document.getElementById(id);
+    const [_, prop] = id.split("-");
+    node.innerText = spell[prop];
+  });
 }
 
 function rollSpell() {
