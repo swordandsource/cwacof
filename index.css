@@ -63,6 +63,10 @@ p {
   }
 }
 
+.header:hover {
+  cursor: pointer;
+}
+
 .cwacof {
   font-family: "proclamate_incisedheavy";
   font-size: 4rem;
@@ -129,4 +133,26 @@ p {
   content: "";
   display: table;
   clear: both;
+}
+
+.section-table {
+  border-top: 1px solid black;
+  padding-top: calc(var(--spacing) * 2);
+  padding-bottom: calc(var(--spacing) * 2);
+}
+
+.table {
+  width: 100%;
+}
+
+.table tr:nth-child(odd) {
+  background-color: aliceblue;
+}
+
+.table td {
+  padding: var(--spacing);
+}
+
+.table-label {
+  font-weight: 800;
 }

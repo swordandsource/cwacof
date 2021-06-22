@@ -26,8 +26,7 @@
     <link rel="stylesheet" type="text/css" href="index.css" />
     <script src="./src/index.js"></script>
     <main>
-      <button id="btn-roll-spell">Roll Spell</button>
-      <header>
+      <header class="header" id="btn-roll-spell">
         <img
           class="image-fireballs"
           height="160"
@@ -57,50 +56,81 @@
           <span class="data-spell-duration"></span>.
         </p>
       </div>
-      <div class="columns">
-        <div class="column section section-ritual">
-          <p>
-            Casting <span class="emphasize data-spell-name"></span> requires
-            specific rituals for both casting and preparation.
-            <span class="spell-reroll spell-ritual">To cast this spell</span>,
-            you will need to <span class="data-spell-ritual"></span>. After the
-            spell has been cast, you will not be able to cast it again without
-            the appropriate preparations.
-            <span class="spell-reroll spell-recharge"
-              >To prepare the spell for another casting</span
-            >, you must <span class="data-spell-recharge"></span>.
-          </p>
-        </div>
-        <div class="column section section-catastrophe">
-          <img class="image-spell-catastrophe" src="assets/images/hell.png" />
-          <p>
-            Be ye warned! Failure to cast
-            <span class="emphasize data-spell-name"></span> correctly, failure
-            to respect its ritual requirements, and failure to avoid the random
-            interference of the gods will result in an arcane catastrophe for
-            the caster.<br />
-            <span class="spell-reroll spell-catastrophe"
-              >In the event of such a catastrophe, let it be known:
-            </span>
-            <span class="data-spell-catastrophe"></span>
-          </p>
-        </div>
+      <div class="section section-ritual">
+        <p>
+          Casting <span class="emphasize data-spell-name"></span> requires
+          specific rituals for both casting and preparation.
+          <span class="spell-reroll spell-ritual">To cast this spell</span>, you
+          will need to <span class="data-spell-ritual"></span>. After the spell
+          has been cast, you will not be able to cast it again without the
+          appropriate preparations.
+          <span class="spell-reroll spell-recharge"
+            >To prepare the spell for another casting</span
+          >, you must <span class="data-spell-recharge"></span>.
+        </p>
       </div>
-      <hr />
-      <h2><span class="data-spell-name"></span></h2>
-      <ul>
-        <!-- Something cool like in Mork Borg -->
-        <li>Spell Name: <span class="data-spell-name"></span></li>
-        <li>Spell Effect: <span class="data-spell-effect"></span></li>
-        <li>Spell Power: <span class="data-spell-power"></span></li>
-        <li>Casting Cost/process: <span class="data-spell-ritual"></span></li>
-        <li>Recharge: <span class="data-spell-recharge"></span></li>
-        <li>Spell AOE: <span class="data-spell-aoe"></span></li>
-        <li>Spell Range: <span class="data-spell-range"></span></li>
-        <li>Spell Damage: <span class="data-spell-damage"></span></li>
-        <li>Spell Duration: <span class="data-spell-duration"></span></li>
-        <li>Catastrophe: <span class="data-spell-catastrophe"></span></li>
-      </ul>
+      <div class="section section-catastrophe">
+        <img class="image-spell-catastrophe" src="assets/images/hell.png" />
+        <p>
+          Be ye warned! Failure to cast
+          <span class="emphasize data-spell-name"></span> correctly, failure to
+          respect its ritual requirements, and failure to avoid the random
+          interference of the gods will result in an arcane catastrophe for the
+          caster.<br />
+          <span class="spell-reroll spell-catastrophe"
+            >In the event of such a catastrophe, let it be known:
+          </span>
+          <span class="data-spell-catastrophe"></span>
+        </p>
+      </div>
+      <div class="section section-table">
+        <p>
+          What follows is the spell summarized in tabular format by modern
+          wizards...
+        </p>
+        <table class="table">
+          <tr>
+            <td class="table-label" width="150">Name</td>
+            <td><span class="data-spell-name"></span></td>
+          </tr>
+          <tr>
+            <td class="table-label">Power level</td>
+            <td><span class="data-spell-power"></span></td>
+          </tr>
+          <tr>
+            <td class="table-label">Effect</td>
+            <td><span class="data-spell-effect"></span></td>
+          </tr>
+          <tr>
+            <td class="table-label">Area of Effect</td>
+            <td><span class="data-spell-aoe"></span></td>
+          </tr>
+          <tr>
+            <td class="table-label">Range</td>
+            <td><span class="data-spell-range"></span></td>
+          </tr>
+          <tr>
+            <td class="table-label">Damage</td>
+            <td><span class="data-spell-damage"></span></td>
+          </tr>
+          <tr>
+            <td class="table-label">Spell Duration</td>
+            <td><span class="data-spell-duration"></span></td>
+          </tr>
+          <tr>
+            <td class="table-label">Ritual</td>
+            <td><span class="data-spell-ritual"></span></td>
+          </tr>
+          <tr>
+            <td class="table-label">Recharge</td>
+            <td><span class="data-spell-recharge"></span></td>
+          </tr>
+          <tr>
+            <td class="table-label">Catastrophe</td>
+            <td><span class="data-spell-catastrophe"></span></td>
+          </tr>
+        </table>
+      </div>
     </main>
   </body>
 </html>
