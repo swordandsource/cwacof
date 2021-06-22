@@ -29,6 +29,8 @@ body {
   font-family: "Vollkorn", sans-serif;
   font-size: 10px;
   margin: 0;
+  background-image: url(/assets/images/background.jpg);
+  background-size: cover;
 }
 
 body {
