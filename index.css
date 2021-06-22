@@ -21,7 +21,7 @@
 
 :root {
   --spacing: 10px;
-  --breakpoint: 600px;
+  --line-height: 2.4rem;
 }
 
 html,
@@ -36,13 +36,21 @@ body {
 }
 
 main {
-  max-width: 650px;
+  max-width: 720px;
   margin: 0 auto;
   font-size: 1.8rem;
 }
 
+@media (min-width: 600px) {
+  main {
+    font-size: 2rem;
+  }
+}
+
 p {
-  margin-bottom: var(--spacing);
+  margin: 0;
+  margin-bottom: var(--line-height);
+  line-height: var(--line-height);
 }
 
 .emphasize {
@@ -51,14 +59,14 @@ p {
 
 @media (min-width: 600px) {
   p {
-    margin: 0;
-    margin-bottom: 0;
+    /* margin-bottom: 0; */
   }
 }
 
 .cwacof {
   font-family: "proclamate_incisedheavy";
   font-size: 4rem;
+  text-align: center;
 }
 
 .spell-name {
@@ -72,7 +80,14 @@ p {
   font-size: 7rem;
   float: left;
   margin-right: 4px;
-  height: 60px;
+  height: 65px;
+}
+
+@media (min-width: 600px) {
+  .spell-name-drop-cap {
+    font-size: 8rem;
+    height: 80px;
+  }
 }
 
 .spell-reroll {
@@ -80,32 +95,33 @@ p {
 }
 
 .image-fireballs {
-  background-color: orange;
-  width: 100%;
   display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: var(--spacing);
   margin-bottom: var(--spacing);
 }
 
 @media (min-width: 600px) {
   .image-fireballs {
-    float: left;
     width: auto;
-    margin-right: var(--spacing);
     margin-bottom: var(--spacing);
   }
 }
 
 .image-spell-catastrophe {
-  background-color: purple;
-  width: 100%;
+  width: 300px;
   display: block;
-  margin-bottom: var(--spacing);
+  margin-left: auto;
+  margin-right: auto;
+  transform: translateY(-20px);
 }
 
 @media (min-width: 600px) {
   .image-spell-catastrophe {
-    width: auto;
     float: right;
+    width: 200px;
+    transform: translateY(-28px);
   }
 }
 

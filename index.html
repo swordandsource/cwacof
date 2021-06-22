@@ -26,12 +26,18 @@
     <link rel="stylesheet" type="text/css" href="index.css" />
     <script src="./src/index.js"></script>
     <main>
+      <button id="btn-roll-spell">Roll Spell</button>
       <header>
+        <img
+          class="image-fireballs"
+          height="160"
+          width="160"
+          src="/assets/images/phoenix.png"
+          alt="A phoenix rising from the ashes"
+        />
         <h1 class="cwacof">Cloudy With A Chance Of Fireballs</h1>
-        <button id="btn-roll-spell">Roll Spell</button>
       </header>
       <div class="section section-name">
-        <img class="image-fireballs" height="160" width="160" />
         <h2 class="spell-name data-spell-title"></h2>
         <p>
           The wise caster of this
@@ -54,8 +60,8 @@
       <div class="columns">
         <div class="column section section-ritual">
           <p>
-            Casting <span class="data-spell-name"></span> requires specific
-            rituals for both casting and preparation.
+            Casting <span class="emphasize data-spell-name"></span> requires
+            specific rituals for both casting and preparation.
             <span class="spell-reroll spell-ritual">To cast this spell</span>,
             you will need to <span class="data-spell-ritual"></span>. After the
             spell has been cast, you will not be able to cast it again without
@@ -66,13 +72,13 @@
           </p>
         </div>
         <div class="column section section-catastrophe">
-          <img class="image-spell-catastrophe" width="160" height="160" />
+          <img class="image-spell-catastrophe" src="assets/images/hell.png" />
           <p>
             Be ye warned! Failure to cast
-            <span class="data-spell-name"></span> correctly, failure to respect
-            its ritual requirements, and failure to avoid the random
+            <span class="emphasize data-spell-name"></span> correctly, failure
+            to respect its ritual requirements, and failure to avoid the random
             interference of the gods will result in an arcane catastrophe for
-            the caster.
+            the caster.<br />
             <span class="spell-reroll spell-catastrophe"
               >In the event of such a catastrophe, let it be known:
             </span>
