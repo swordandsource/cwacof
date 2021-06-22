@@ -49,11 +49,12 @@ main {
   position: absolute;
   display: none;
   top: 530px;
-  left: 65px;
+  left: 19%;
+  left: 20vw;
   width: 400px;
   z-index: 1;
   opacity: 0.1;
-  animation: spin 40s linear infinite;
+  animation: spin 60s linear infinite;
 }
 
 @-moz-keyframes spin {
@@ -110,7 +111,7 @@ p {
   background-image: url(/assets/images/roll-spell-bg.jpg);
   background-size: 180px;
   border: 0;
-  border: 2px solid black;
+  border: 2px solid #302e6f;
   color: white;
 }
 
@@ -198,18 +199,40 @@ p {
 
 .table {
   width: 100%;
+  font-size: 1.6rem;
+}
+
+@media (min-width: 600px) {
+  .table {
+    font-size: 2rem;
+  }
 }
 
 .table tr:nth-child(odd) {
-  background-color: aliceblue;
+  background-color: #ffcb47;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f3f2e2;
 }
 
 .table td {
+  border: 1px solid #302e6f;
   padding: var(--spacing);
 }
 
 .table-label {
   font-weight: 800;
+}
+
+.table-label-width {
+  width: 80px;
+}
+
+@media (min-width: 600px) {
+  .table-label-width {
+    width: 160px;
+  }
 }
 
 .image-line-ornament {
@@ -220,6 +243,7 @@ p {
 }
 
 .footer {
+  color: #302e6f;
   font-size: 1.6rem;
   text-align: center;
   padding: var(--line-height);
