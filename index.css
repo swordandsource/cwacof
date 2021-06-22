@@ -48,10 +48,9 @@ main {
 .image-alchemical-circle {
   position: absolute;
   display: none;
-  top: 530px;
-  left: 19%;
-  left: 20vw;
-  width: 400px;
+  top: 650px;
+  left: 17%;
+  width: 450px;
   z-index: 1;
   opacity: 0.1;
   animation: spin 60s linear infinite;
@@ -126,6 +125,11 @@ p {
 .cwacof {
   font-family: "proclamate_incisedheavy";
   font-size: 4rem;
+  text-align: center;
+  margin-bottom: calc(var(--line-height) / 2);
+}
+
+.subtitle {
   text-align: center;
 }
 
