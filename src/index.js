@@ -55,7 +55,7 @@ function renderSpell(spell) {
 }
 
 function rollSpell() {
-  const noun = rollSpellSuffix();
+  const noun = d100() <= 8 ? "fireball" : rollSpellSuffix(); // gotta have a chance of fireballs ;)
   const power = rollSpellPower();
   return {
     name: rollSpellName({ noun }),
@@ -226,6 +226,10 @@ function rollFirstName() {
 
 function d6() {
   return sample([1, 2, 3, 4, 5, 6]);
+}
+
+function d100() {
+  return Math.round(Math.random() * 100);
 }
 
 function rollColor() {
