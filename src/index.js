@@ -132,6 +132,7 @@ function rollBodyPart() {
     "nose",
     "eye",
     "butt",
+    "hair",
   ];
 
   return sample(parts);
@@ -142,6 +143,9 @@ function rollMonster() {
     "wendigo",
     "vampire bat",
     "giant spider",
+    "giant ant",
+    "cave bear",
+    "zombie bear",
     "wyvern",
     "troll",
     "zombie",
@@ -153,6 +157,30 @@ function rollMonster() {
     "goblin",
     "berserker",
     "lich",
+    "bugbear",
+    "giant centipede",
+    "giant crab",
+    "djinn",
+    "demon boar",
+    "hellhound",
+    "doppelganger",
+    "ettin",
+    "giant fly",
+    "gnoll",
+    "frost golem",
+    "gorgon",
+    "black slime",
+    "hobgoblin",
+    "giant mantis",
+    "manticore",
+    "morlock",
+    "minotaur",
+    "mummy",
+    "orc",
+    "owlbear",
+    "purple worm",
+    "flame salamander",
+    "spectre",
   ];
 
   return sample(monsters);
