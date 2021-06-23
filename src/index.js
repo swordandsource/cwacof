@@ -90,6 +90,8 @@ function rollSpellPower() {
 function rollSpellRitual(power) {
   const view = {
     d6: d6,
+    color: rollColor,
+    monster: rollMonster,
   };
   const ritual = render(sample(rituals[power]), view);
 
@@ -99,6 +101,7 @@ function rollSpellRitual(power) {
 function rollSpellRecharge(power) {
   const view = {
     d6: d6,
+    d100: d100,
     monster: rollMonster,
   };
   const recharge = render(sample(recharges[power]), view);

@@ -2,16 +2,36 @@
   "minor": [
     "tap your heels together",
     "sing a brief verse",
-    "snap your fingers clearly"
+    "snap your fingers clearly",
+    "concentrate on your opponent",
+    "utter the magic phrase",
+    "combine the basic components from your pouch",
+    "quaff the {{color}} elixir",
+    "point towards the target",
+    "gesture in the direction of the target",
+    "stare unblinking at the target for {{d6}} seconds",
+    "point a focus, such as a wand or crystal, towards the target"
   ],
   "moderate": [
     "perform a basic dance",
     "chant magic words while making the appropriate hand motion",
-    "concentrate for {{d6}} minutes"
+    "concentrate for {{d6}} minutes",
+    "stare unblinking at the target for {{d6}} minutes",
+    "perform the ritual song",
+    "repeat the magic phrase {{d6}} times without interruption",
+    "touch the target with your bare skin",
+    "imbibe the {{color}} potion and wait for {{d6}} minutes",
+    "utter the magic phrase and combine the components from your pouch"
   ],
   "major": [
     "prepare a ritual circle {{d6}} days in advance",
-    "acquire the blood of an enemy and prepare a decoction",
-    "perfectly recite an ancient religious text"
+    "acquire the blood of an enemy and prepare a {{color}} decoction",
+    "perfectly recite an ancient religious text",
+    "maintain unbroken skin contact with the target for {{d6}} hours",
+    "maintain unbroken eye contact with the target for {{d6}} hours",
+    "acquire the blood of a {{monster}} and prepare a {{color}} elixir",
+    "perform a ritual sacrifice while chanting the magic phrases",
+    "walk the leylines surrounding the area for {{d6}} days",
+    "utter the magic phrase, combine the components, perform the ritual dance, and think only of the outcome you desire without being interrupted"
   ]
 }

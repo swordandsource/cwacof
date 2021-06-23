@@ -2,16 +2,46 @@
   "minor": [
     "wait for {{d6}} minutes",
     "wait for {{d6}} seconds",
-    "spin in {{d6}} circles while facing the sky"
+    "spin in {{d6}} circles while facing the sky",
+    "recite a well-known poem from memory without interruption",
+    "hear the sound of the sparrow's call",
+    "wait until your mind is clear",
+    "perform the basic movements with your arms",
+    "reassemble the basic components from your pouch",
+    "recite the words of magic with confidence",
+    "identify a physical feature of your opponent and focus on it for {{d6}} seconds",
+    "scoop a handful of soil from the earth beneath your feet",
+    "run fingers through the flowing water of the river",
+    "run fingers through the rustling leaves of an adult tree",
+    "pluck a stone from a running river"
   ],
   "moderate": [
     "wait for {{d6}} hours",
     "rest by an open fire with someone you trust",
-    "remember something bad from your past and then let it go"
+    "remember something bad from your past and then let it go",
+    "wait until your heartrate drops below the rhythm of a horse's plodding clop",
+    "perform the complex movements with your arms",
+    "reassemble the rare components",
+    "cook a 3 course meal and serve it to someone",
+    "compose a short song and perform it",
+    "repeat the mantra {{d100}} times",
+    "find and kill a {{monster}}",
+    "burn a piece of a {{monster}}",
+    "perform a clean strike with bare knuckles on your opponent"
   ],
   "major": [
     "wait for {{d6}} days",
     "remove one finger from your main hand and burn it at an altar using rare firesalts",
-    "travel to the land of the {{monster}} and recover what has been lost"
+    "travel to the land of the {{monster}} and recover what has been lost",
+    "recite one of the epic poems from memory without interruption",
+    "capture a sparrow and feed it for {{d6}} days",
+    "entirely rediscover the spell from first principles",
+    "run fingers through the flowing water of the lost river of Hubur",
+    "run fingers through the rustling leaves of the World Tree",
+    "pluck a stone from the depths of the underworld",
+    "steal something important from a god",
+    "repeat the mantra {{d100}} times {{d100}} times",
+    "complete a hero's journey",
+    "hear the song of the phoenix"
   ]
 }

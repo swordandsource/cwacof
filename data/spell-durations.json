@@ -2,20 +2,41 @@
   "minor": [
     "{{d6}} seconds",
     "{{d6}} minutes",
-    "for about as long as it takes to recite the alphabet"
+    "for about as long as it takes to recite the alphabet",
+    "for as long as you can stand on one foot",
+    "for as long as you can hold your breath",
+    "for about as long as it takes to walk down the street",
+    "for about as long as it takes to recite a short poem",
+    "only as long as you can concentrate on it",
+    "only a few minutes",
+    "only a few seconds"
   ],
   "moderate": [
     "{{d6}} hours",
-    "for about as long as it takes to read a fairy tale"
+    "only an hour",
+    "only until you fall asleep",
+    "for about as long as it takes to walk through a small town",
+    "for about as long as it takes to read a fairy tale",
+    "until the next mealtime",
+    "until the temperature changes at dusk",
+    "until dawn",
+    "only a few hours"
   ],
   "major": [
     "{{d6}} days",
     "{{d6}} weeks",
+    "{{d6}} watches",
     "a fortnight",
+    "until the next time you cast a spell",
     "until the next lunar eclipse",
     "until the next solar eclipse",
     "until the seasons change",
     "until the sun fails to rise in the morning",
-    "until all civilizations fade to myth"
+    "until all civilizations fade to myth",
+    "until a child is born",
+    "until the end of all things",
+    "until you have seen 3 sunrises",
+    "until the next lunar cycle begins",
+    "until you have seen 3 sunsets"
   ]
 }

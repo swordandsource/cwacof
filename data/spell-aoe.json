@@ -3,11 +3,18 @@
   "{{d6}} targets",
   "several targets",
   "an area no larger than three fighting beggars",
+  "an area the size of a single coin",
   "an area the size of a puddle",
   "an area the size of a wagon",
   "an area the size of a thimble",
   "an area the size of a young forest",
   "an area the size of an old forest",
+  "an area the size of a town",
+  "an area the size of {{d6}} wagons",
+  "an area the size of a barn",
+  "an area no larger than a baby's head",
+  "an area no larger than your tent",
+  "an area no larger than an old well",
   "the entire planet",
   "the entire cosmos"
 ]
